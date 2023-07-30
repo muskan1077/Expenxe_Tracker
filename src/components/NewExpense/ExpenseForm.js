@@ -3,34 +3,56 @@ import React, { useState } from 'react';
 import './ExpenseForm.css';
 
 const ExpenseForm = () => {
-  // const [enteredTitle, setEnteredTitle] = useState('');
-  // const [enteredAmount, setEnteredAmount] = useState('');
-  // const [enteredDate, setEnteredDate] = useState('');
-  const[userInput,setUserInput] = useState({
-    enteredTitle: '',
-    enteredAmount: '',
-    enteredDate: ''
-  });
+   const [enteredTitle, setEnteredTitle] = useState('');
+   const [enteredAmount, setEnteredAmount] = useState('');
+   const [enteredDate, setEnteredDate] = useState('');
+  // const[userInput,setUserInput] = useState({
+  //   enteredTitle: '',
+  //   enteredAmount: '',
+  //   enteredDate: ''
+  // });
 
   const titleChangeHandler = (event) => {
-   // setEnteredTitle(event.target.value);
-   setUserInput({
-    ...userInput,
-    enterTitle: event.target.value,
-   })
+     setEnteredTitle(event.target.value);
+  //  setUserInput({
+  //   ...userInput,
+  //   enterTitle: event.target.value,
+  //  })
   };
 
   const amountChangeHandler = (event) => {
-    //setEnteredAmount(event.target.value);
-    ...userInput,
-    enterAmount: event.target.value,
-  };
+      setEnteredAmount(event.target.value);
+  //   ...userInput,
+  //   enterAmount: event.target.value, 
+};
 
   const dateChangeHandler = (event) => {
-    //setEnteredDate(event.target.value);
-    ...userInput,
-    enterDate: event.target.value,
+    setEnteredDate(event.target.value);
+  //   ...userInput,
+  //   enterDate: event.target.value,
+  // };
   };
+  const inputChangeHandler = (identifier,value) =>{
+    if(identifier === 'title'){
+        setEnteredTitle(value);
+    }
+    else if(identifier ==='date'){
+      setEnteredDate(value);
+    }
+    else{
+      setEnteredAmount(value);
+    }
+  };
+  const submitHandler = (event) => {
+    event.preventDefault();
+    const expenseDate = {
+      title: enteredTitle,
+      amount: enteredAmount,
+      date: new Date(enteredDate)
+
+      
+    };
+   };
 
   return (
     <form>
