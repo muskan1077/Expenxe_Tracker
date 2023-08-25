@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Expenxe_Tracker/static/css/main.96d25427.css",
+    "main.js": "/Expenxe_Tracker/static/js/main.f02ae405.js",
+    "index.html": "/Expenxe_Tracker/index.html",
+    "main.96d25427.css.map": "/Expenxe_Tracker/static/css/main.96d25427.css.map",
+    "main.f02ae405.js.map": "/Expenxe_Tracker/static/js/main.f02ae405.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.96d25427.css",
+    "static/js/main.f02ae405.js"
+  ]
+}
